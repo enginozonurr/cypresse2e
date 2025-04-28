@@ -13,18 +13,3 @@ cypress-test:
       - cypress/screenshots/
       - cypress/videos/
     expire_in: 7 days
-stages:
-  - test
-
-cypress-test:
-  stage: test
-  image: cypress/browsers:node-18.16.0-chrome-114.0.5735.133-1 # Resmi Cypress Docker imajı
-  script:
-    - npm install
-    - npx cypress run --browser chrome --headless # Varsayılan headless mod
-  artifacts:
-    when: always
-    paths:
-      - cypress/screenshots/
-      - cypress/videos/
-    expire_in: 7 days
