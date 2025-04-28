@@ -80,6 +80,7 @@ describe("SauceDemo E2E Test", () => {
         cy.get('.shopping_cart_link').click();
         cy.get('[data-test="checkout"]').click();
         cy.get('[data-test="continue"]').click();
+        
         cy.get('[data-test="error"]').should('be.visible');
     });
 
